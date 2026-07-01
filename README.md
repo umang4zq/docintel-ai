@@ -248,8 +248,7 @@ Admin panel additionally needs:
 Umang — Flutter and full-stack developer
 GitHub: github.com/umang4zq
 
-Mentored by Maulik Mandali, CEO of Vichar AI
-(builders of Dhruv-27B and ViCoder)
+
 
 ---
 
