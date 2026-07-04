@@ -9,7 +9,6 @@ import PDFPanel from '../components/workspace/PDFPanel';
 import ChatPanel from '../components/workspace/ChatPanel';
 import NotesPanel from '../components/workspace/NotesPanel';
 import FlashcardModal from '../components/workspace/FlashcardModal';
-import Footer from '../components/Footer';
 
 function WorkspaceLayout({ initialAction }: { initialAction?: string }) {
   const { theme } = useTheme();
@@ -160,7 +159,6 @@ function WorkspaceLayout({ initialAction }: { initialAction?: string }) {
         {showFlashcards && <FlashcardModal />}
       </div>
     </div>
-    <Footer />
     </>
   );
 }
