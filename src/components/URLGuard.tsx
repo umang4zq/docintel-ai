@@ -7,11 +7,9 @@ interface URLGuardProps {
 }
 
 export default function URLGuard({ children }: URLGuardProps) {
-  const [isClient, setIsClient] = useState(false);
   const [isAllowed, setIsAllowed] = useState(true);
 
   useEffect(() => {
-    setIsClient(true);
     const origin = window.location.origin;
     const hostname = window.location.hostname;
     
@@ -23,13 +21,6 @@ export default function URLGuard({ children }: URLGuardProps) {
     
     setIsAllowed(allowed);
   }, []);
-
-  if (!isClient) {
-    // Avoid layout flashes during server-side rendering/hydration
-    return (
-      <div style={{ backgroundColor: '#0D1117', minHeight: '100vh' }} />
-    );
-  }
 
   if (!isAllowed) {
     return (
