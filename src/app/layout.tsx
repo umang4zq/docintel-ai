@@ -18,6 +18,8 @@ export const metadata: Metadata = {
 };
 
 import URLGuard from "../components/URLGuard";
+import { ThemeProvider } from "../context/ThemeContext";
+import { AuthProvider } from "../context/AuthContext";
 
 export default function RootLayout({
   children,
@@ -30,7 +32,11 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <URLGuard>{children}</URLGuard>
+        <ThemeProvider>
+          <AuthProvider>
+            <URLGuard>{children}</URLGuard>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { chatWithDoc } from '../lib/docIntelAI';
 import type { Message, Chunk } from '../types/workspace';
