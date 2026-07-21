@@ -75,6 +75,44 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
+  const isAllowedUrl = typeof window !== 'undefined' && (
+    window.location.origin === 'http://13.235.245.132:3001' ||
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1'
+  );
+
+  if (!isAllowedUrl) {
+    return (
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        backgroundColor: '#0D1117',
+        color: '#FFFFFF',
+        fontFamily: 'sans-serif',
+        padding: '20px',
+        textAlign: 'center'
+      }}>
+        <h1 style={{ fontSize: '24px', marginBottom: '16px', color: '#FF453A' }}>Access Denied</h1>
+        <p style={{ fontSize: '16px', color: '#8B949E' }}>
+          This application is restricted and can only run on the authorized URL:
+        </p>
+        <code style={{
+          marginTop: '12px',
+          padding: '8px 16px',
+          backgroundColor: '#161B22',
+          borderRadius: '6px',
+          border: '1px solid #30363D',
+          color: '#58A6FF'
+        }}>
+          http://13.235.245.132:3001/
+        </code>
+      </div>
+    );
+  }
+
   return (
     <BrowserRouter>
       <ThemeProvider>
