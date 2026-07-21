@@ -2,20 +2,20 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import DashboardPage from './pages/DashboardPage';
-import UploadPage from './pages/UploadPage';
-import DocumentsPage from './pages/DocumentsPage';
-import SavedPDFsPage from './pages/SavedPDFsPage';
-import NotesPage from './pages/NotesPage';
-import HowItWorksPage from './pages/HowItWorksPage';
-import PricingPage from './pages/PricingPage';
-import CapabilitiesPage from './pages/CapabilitiesPage';
-import UseCasesPage from './pages/UseCasesPage';
-import WorkspacePage from './pages/WorkspacePage';
-import AboutPage from './pages/AboutPage';
+import LandingPage from './views/LandingPage';
+import LoginPage from './views/LoginPage';
+import RegisterPage from './views/RegisterPage';
+import DashboardPage from './views/DashboardPage';
+import UploadPage from './views/UploadPage';
+import DocumentsPage from './views/DocumentsPage';
+import SavedPDFsPage from './views/SavedPDFsPage';
+import NotesPage from './views/NotesPage';
+import HowItWorksPage from './views/HowItWorksPage';
+import PricingPage from './views/PricingPage';
+import CapabilitiesPage from './views/CapabilitiesPage';
+import UseCasesPage from './views/UseCasesPage';
+import WorkspacePage from './views/WorkspacePage';
+import AboutPage from './views/AboutPage';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();

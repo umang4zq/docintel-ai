@@ -15,7 +15,7 @@ const NIM_BASE_URL = '/nim-api'; // Proxied to bypass CORS
 
 function getApiKey(): string {
   // Try Vite first, then process.env (for Next.js / Node)
-  const key = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_NIM_API_KEY) 
+  const key = (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.VITE_NIM_API_KEY) 
               || (typeof process !== 'undefined' && process.env && process.env.VITE_NIM_API_KEY)
               || (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_NIM_API_KEY);
   if (!key) throw new Error('NIM_API_KEY not set in .env');

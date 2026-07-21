@@ -5,7 +5,7 @@ import {
   Search, Maximize2, RotateCw, X, ChevronUp, ChevronDown,
   Sparkles, BookmarkPlus, Copy
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { useWorkspace } from '../../context/WorkspaceContext';
 
@@ -25,6 +25,7 @@ export default function PDFPanel() {
     setDocumentChunks
   } = useWorkspace();
   const navigate = useNavigate();
+  const { id: docId } = useParams<{ id: string }>();
   
   const [scale, setScale] = useState(1.2);
   const [rotation, setRotation] = useState(0);
@@ -309,7 +310,7 @@ export default function PDFPanel() {
             <div 
               key={`page_${index + 1}`} 
               className="mb-8 relative"
-              ref={el => pageRefs.current[index] = el}
+              ref={el => { pageRefs.current[index] = el; }}
               data-page-number={index + 1}
             >
               <div className={`transition-shadow duration-300 ${theme === 'dark' ? 'shadow-[0_2px_12px_rgba(0,0,0,0.4)]' : 'shadow-[0_2px_12px_rgba(0,0,0,0.15)]'}`}>

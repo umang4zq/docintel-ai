@@ -144,7 +144,9 @@ function WorkspaceLayout({ initialAction }: { initialAction?: string }) {
             </div>
           </div>
         ) : (
-          <PanelGroup direction="horizontal" onLayout={setPanelSizes}>
+          <>
+            {/* @ts-ignore react-resizable-panels types mismatch */}
+            <PanelGroup orientation="horizontal" onLayout={setPanelSizes as any}>
             <Panel defaultSize={panelSizes[0]} minSize={20}>
               <PDFPanel />
             </Panel>
@@ -153,6 +155,7 @@ function WorkspaceLayout({ initialAction }: { initialAction?: string }) {
               <ChatPanel />
             </Panel>
           </PanelGroup>
+          </>
         )}
 
         {showNotes && <NotesPanel />}

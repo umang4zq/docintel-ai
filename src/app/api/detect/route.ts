@@ -147,7 +147,7 @@ ${JSON.stringify(cleanDetections, null, 2)}`;
       // Fallback: Return raw OCR coordinates if LLM fails
       return NextResponse.json({
         layoutDescription: "Layout analysis fallback (LLM offline). Directly showing OCR text elements.",
-        elements: cleanDetections.map((det) => ({
+        elements: cleanDetections.map((det: any) => ({
           id: det.id,
           text: det.text,
           type: "label",
@@ -183,7 +183,7 @@ ${JSON.stringify(cleanDetections, null, 2)}`;
       // Fallback representation
       parsedResult = {
         layoutDescription: "Could not parse structured layout description. Showing raw analysis text.",
-        elements: cleanDetections.map((det) => ({
+        elements: cleanDetections.map((det: any) => ({
           id: det.id,
           text: det.text,
           type: "other",

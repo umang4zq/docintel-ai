@@ -3,7 +3,7 @@ import FadingVideo from './FadingVideo';
 import { ImageIcon, MovieIcon, LightbulbIcon } from './Icons';
 
 export default function Capabilities() {
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -11,12 +11,12 @@ export default function Capabilities() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { filter: 'blur(10px)', opacity: 0, y: 30 },
     visible: { filter: 'blur(0px)', opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
-  const overlayVariants = {
+  const overlayVariants: any = {
     hidden: { opacity: 1 },
     visible: { opacity: 0.4, transition: { duration: 1.5, ease: "easeInOut" } }
   };
