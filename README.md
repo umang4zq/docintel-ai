@@ -188,7 +188,7 @@ docintel-ai/
 
 ## NVIDIA NIM models used
 
-All AI calls go to https://integrate.api.nvidia.com/v1
+All AI Models: https://build.nvidia.com/models
 One API key. Five specialist models.
 
 | Model | Role |
