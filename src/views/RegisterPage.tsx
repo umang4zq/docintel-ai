@@ -58,7 +58,7 @@ export default function RegisterPage() {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L2 12L12 22L22 12L12 2Z" fill="white" className="text-zinc-900 dark:text-white"/>
           </svg>
-          <span className="font-mono font-bold text-xl">Study AI</span>
+          <span className="font-mono font-bold text-xl">DocIntel AI</span>
         </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="max-w-md">
@@ -67,8 +67,8 @@ export default function RegisterPage() {
           <div className="flex flex-col gap-4">
             {[
               "3 free credits on signup — no card needed",
-              "Full Knowledge Graph ZIP on first generation",
-              "Cross-doc RAG 2.x + go_router 6.x out of the box",
+              "Deep extraction of tables, graphs, and structured data",
+              "Intelligent Cross-document search & reasoning",
               "DocIntel AI — not OpenAI, not Anthropic"
             ].map((feat, i) => (
               <div key={i} className="flex items-start gap-3 text-zinc-900 dark:text-zinc-600 dark:text-white/70 text-sm">

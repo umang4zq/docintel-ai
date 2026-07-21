@@ -14,7 +14,7 @@ export default function HowItWorks() {
         
         {/* Eyebrow */}
         <p className="text-[#1D9E75] text-xs font-medium tracking-[0.2em] uppercase mb-4">
-          How Study AI works
+          How DocIntel AI works
         </p>
         
         {/* Heading */}

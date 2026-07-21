@@ -38,7 +38,7 @@ export default function NimStack() {
         
         {/* Subtext */}
         <p className="text-zinc-900 dark:text-zinc-500 dark:text-white/50 text-base max-w-lg mb-20">
-          Every AI call in Study AI goes to https://integrate.api.nvidia.com/v1 — four specialized models, each assigned one job.
+          Every AI call in DocIntel AI goes to https://integrate.api.nvidia.com/v1 — four specialized models, each assigned one job.
         </p>
         
         {/* Models grid */}

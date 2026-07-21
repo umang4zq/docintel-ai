@@ -38,7 +38,7 @@ export default function LoginPage() {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L2 12L12 22L22 12L12 2Z" fill="white" className="text-zinc-900 dark:text-white"/>
           </svg>
-          <span className="font-mono font-bold text-xl">Study AI</span>
+          <span className="font-mono font-bold text-xl">DocIntel AI</span>
         </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="max-w-md">
@@ -50,12 +50,12 @@ export default function LoginPage() {
           <div className="flex gap-3 mt-6 flex-wrap">
             <span className="bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-2 text-sm">3 free credits</span>
             <span className="bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-2 text-sm">~45s per gen</span>
-            <span className="bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-2 text-sm">Flutter 3.x</span>
+            <span className="bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-2 text-sm">OCR + RAG</span>
           </div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="bg-zinc-50 dark:bg-white/[0.03] border border-zinc-200 dark:border-white/8 rounded-2xl p-5 max-w-md">
-          <p className="text-zinc-900 dark:text-zinc-600 dark:text-white/70 text-sm leading-relaxed mb-4">"Study AI cut my boilerplate time from 2 hours to 45 seconds. The Cross-doc RAG setup alone is worth it."</p>
+          <p className="text-zinc-900 dark:text-zinc-600 dark:text-white/70 text-sm leading-relaxed mb-4">"DocIntel AI cut my research analysis time from 2 hours to 45 seconds. The Cross-doc RAG setup alone is worth it."</p>
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs font-bold">PK</div>
             <div className="text-sm font-medium">— Priya K., Researcher</div>
@@ -70,7 +70,7 @@ export default function LoginPage() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
           <h2 className="font-mono font-bold text-zinc-900 dark:text-white text-2xl lg:text-3xl">Welcome back</h2>
-          <p className="text-zinc-900 dark:text-zinc-500 dark:text-white/50 text-sm mt-2 mb-8">Sign in to your Study AI account</p>
+          <p className="text-zinc-900 dark:text-zinc-500 dark:text-white/50 text-sm mt-2 mb-8">Sign in to your DocIntel AI account</p>
 
           <form onSubmit={handleLogin} className="flex flex-col gap-4">
             <div>
@@ -108,7 +108,7 @@ export default function LoginPage() {
             )}
 
             <button disabled={loading} type="submit" className="mt-4 w-full bg-[#7C3AED] text-zinc-900 dark:text-white font-semibold py-3.5 rounded-xl hover:bg-[#6D28D9] transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70 disabled:hover:scale-100 flex justify-center items-center h-12">
-              {loading ? <div className="w-5 h-5 border-2 border-zinc-300 dark:border-white/30 border-t-white rounded-full animate-spin" /> : "Sign in to Study AI"}
+              {loading ? <div className="w-5 h-5 border-2 border-zinc-300 dark:border-white/30 border-t-white rounded-full animate-spin" /> : "Sign in to DocIntel AI"}
             </button>
           </form>
 
