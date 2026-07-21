@@ -13,7 +13,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
-    const saved = localStorage.getItem('scaff-theme') as Theme | null;
+    const saved = localStorage.getItem('docintel-theme') as Theme | null;
     if (saved) {
       setTheme(saved);
     }
@@ -21,7 +21,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('scaff-theme', theme);
+    localStorage.setItem('docintel-theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

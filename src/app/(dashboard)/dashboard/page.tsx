@@ -1,1 +1,23 @@
-export default function Temp() { return null; }
+'use client';
+
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import { BrowserRouter } from 'react-router-dom';
+
+const DashboardPage = dynamic(() => import('@/views/DashboardPage'), { ssr: false });
+
+export default function Page() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <BrowserRouter>
+      <DashboardPage />
+    </BrowserRouter>
+  );
+}

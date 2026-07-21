@@ -13,8 +13,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Study AI - Document Intelligence Platform",
-  description: "Powered by DocIntel AI",
+  title: "DocIntel AI - Document Intelligence Platform",
+  description: "Understand every document. Instantly.",
 };
 
 export default function RootLayout({

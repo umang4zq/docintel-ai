@@ -1,5 +1,23 @@
-import StudyAIHero from "@/components/ScaffHero";
+'use client';
+
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import { BrowserRouter } from 'react-router-dom';
+
+const LandingPage = dynamic(() => import('@/views/LandingPage'), { ssr: false });
 
 export default function Page() {
-  return <StudyAIHero />;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <BrowserRouter>
+      <LandingPage />
+    </BrowserRouter>
+  );
 }
